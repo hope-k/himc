@@ -32,7 +32,7 @@ const DashboardNav = () => {
         <div className=' h-full w-[16.4%] fixed left-0 border-r-2 rounded-lg border-gray-100  flex'>
           <div id='dashboardNav' className=' flex flex-col items-center h-full w-full'>
             <div className='w-[16rem]  p-2  rounded-2xl mt-[1rem]'>
-              <img src='/hacketthill.svg' alt='logo' />
+              <img src='/hacketthill.png' alt='logo' />
             </div>
             <div className='w-full absolute top-[10rem]'>
               <Link to='/account/dashboard' className={' mb-5 flex items-center w-full px-6 py-[0.62rem] duration-500 ' + (location.pathname === '/account/dashboard' && 'bg-[#74b3e750] flex  font-semibold border-l-[5.5px] border-green-600')}>
@@ -60,7 +60,7 @@ const DashboardNav = () => {
                 Remote Deposits
               </div>
               <Link onClick={(e) => {
-                window.location.href = "mailto:support@rothbardau.com"
+                window.location.href = "mailto:support@himccapital.com"
                 e.preventDefault();
               }} to='#' className='cursor-pointer mb-5 flex items-center   px-6 py-[0.62rem]'
               >

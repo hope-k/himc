@@ -43,7 +43,7 @@ const Header = () => {
                             <div className=' flex cursor-pointer'>
                                 <Link to='/' className=''>
                                     <div className='w-[16rem] h-full p-2 mr-[2rem] rounded-2xl'>
-                                        <img src='/hacketthill.svg' alt='logo' />
+                                        <img src='/hacketthill.png' alt='logo' />
                                     </div>
                                 </Link>
                             </div>
@@ -55,7 +55,7 @@ const Header = () => {
                                 </div>
                                 <div >
                                     <div className='text-slate-600 font-bold text-sm'>+61 3 9854 4666 </div>
-                                    <div className='text-slate-500 text-sm'>rothbardau@support.com</div>
+                                    <div className='text-slate-500 text-sm'>support@himccapital.com</div>
                                 </div>
                             </div>
                             <div className='flex mr-[4rem] whitespace-nowrap'>

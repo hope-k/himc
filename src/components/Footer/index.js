@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className='flex bg-slate-200 shadow-lg lg:px-[6rem] px-[2rem] lg:h-[50vh] flex-wrap w-full'>
+        <div className='flex bg-[#fff] shadow-lg lg:px-[6rem] px-[2rem] lg:h-[50vh] flex-wrap w-full'>
             <div className='mt-[3rem] flex flex-col'>
                 <div className='w-[300px] h-[300px] absolute'>
-                    <img src='/hacketthill.svg' alt='logo' />
+                    <img src='/hacketthill.png' alt='logo' />
                 </div>
-                <p className='font-light relative top-[6rem] max-w-lg text-[15px] text-[#6084a4]'>
+                <p className='font-light relative top-[6.5rem] max-w-lg text-[15px] text-[#6084a4]'>
                     We’re a leading international banking group committed to building a sustainable business over the long-term. We operate in some of the world's most dynamic markets and have been for over 15 years.
                 </p>
             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
 
 
             <div className='w-full flex justify-center border-t border-gray-300 pt-[10px] lg:pt-[20px]'>
-                <span className='text-[#6084a4] text-sm font-light'>Copyright © 2024 RothBard Investment Group </span>
+                <span className='text-[#6084a4] text-sm font-light'>Copyright © 2024 HIMC Capital </span>
             </div>
         </div>
     )
