@@ -10,7 +10,7 @@ const Footer = () => {
                     <img src='/hacketthill.png' alt='logo' />
                 </div>
                 <p className='font-light relative top-[6.5rem] max-w-lg text-[15px] text-[#6084a4]'>
-                    We’re a leading international banking group committed to building a sustainable business over the long-term. We operate in some of the world's most dynamic markets and have been for over 75 years.
+                    We’re a leading international banking group committed to building a sustainable business over the long-term. We operate in some of the world's most dynamic markets and have been for over 15 years.
                 </p>
             </div>
 

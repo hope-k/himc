@@ -140,14 +140,14 @@ const Header = () => {
 
                     <div className=' hidden container lg:flex px-[10rem] items-center text-[#665522] justify-center'>
                         <div className='flex w-full '>
-                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-[#605111]'>Online Banking</Link>
-                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-[#605111] whitespace-nowrap'>Credit Cards</Link>
-                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-[#605111] whitespace-nowrap'>Checking & Savings</Link>
-                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-[#605111]'>Loans</Link>
+                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-orange-700'>Online Banking</Link>
+                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-orange-700 whitespace-nowrap'>Credit Cards</Link>
+                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-orange-700 whitespace-nowrap'>Checking & Savings</Link>
+                            <Link to='/sign-in' className='duration-200 p-4 hover:text-white hover:bg-orange-700'>Loans</Link>
                         </div>
                         <div className='flex'>
-                            <Link to='/register' className='duration-200 p-4  whitespace-nowrap hover:text-white hover:bg-[#605111]'>Request Account</Link>
-                            <Link to='/sign-in' className='whitespace-nowrap duration-200 p-4 flex hover:text-white hover:bg-[#605111] text-[#665522] font-semibold'>
+                            <Link to='/register' className='duration-200 p-4  whitespace-nowrap hover:text-white hover:bg-orange-700'>Request Account</Link>
+                            <Link to='/sign-in' className='whitespace-nowrap duration-200 p-4 flex hover:text-white hover:bg-orange-700 text-[#665522] font-semibold'>
                                 Sign On
                                 <div className='ml-2 pt-[2px]'>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-4" viewBox="0 0 20 20" fill="currentColor">

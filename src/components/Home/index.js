@@ -112,7 +112,7 @@ const Home = () => {
 
               <h1 className="text-4xl font-montserrat pb-8 text-[#f0f0f0] lora md:max-w-lg  capitalize tracking-tighter">
                 Welcome to the{" "}
-                <span className="border-b-2 underline  border-yellow-700 font-medium tracking-tight  mb-2">
+                <span className="border-b-4 underline  border-orange-600 font-medium tracking-tight  mb-2">
                   <br />
                   HIMC Capital,{" "}
                 </span>{" "}
@@ -128,7 +128,6 @@ const Home = () => {
                 With our cutting-edge technology, your financial assets are in
                 safe hands, allowing you to invest in tomorrow with confidence
                 today.
-                
               </p>
 
               <div className="flex font-light text-[#ccc] flex-col md:flex-row  md:pt-1 py-[2rem] ">
