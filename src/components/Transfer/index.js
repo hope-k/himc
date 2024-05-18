@@ -11,6 +11,8 @@ import FadeLoader from 'react-spinners/FadeLoader'
 import { RotatingLines } from 'react-loader-spinner'
 import Lottie from 'lottie-react'
 import transferLoader from '../../animations/transferLoader.json'
+import getSymbolFromCurrency from 'currency-symbol-map'
+
 const Transfer = () => {
     const navigate = useNavigate()
     const { notify } = useNotifications()
@@ -50,6 +52,8 @@ const Transfer = () => {
     const [memo, setMemo] = useState('');
     const [amount, setAmount] = useState('');
     const [accountId, setAccountId] = useState(`${accounts?.[0]?._id}`);
+    const selectedAccount = accounts?.find(account => account._id === accountId)
+
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -155,18 +159,17 @@ const Transfer = () => {
                                         <NumberFormat
                                             className=' bg-[#cfcece33] peer pb-2 rounded-none border-b-2 border-green-700 outline-none mb-6 placeholder-transparent focus-within:border-green-700 focus-within:border-b'
                                             thousandsGroupStyle="thousand"
-                                            prefix="$"
+                                            prefix={getSymbolFromCurrency(selectedAccount?.currency) ? getSymbolFromCurrency(selectedAccount?.currency) :'$'}
                                             decimalSeparator="."
                                             displayType="input"
                                             type="tel"
-                                            placeholder=' '
+                                            placeholder=''
                                             thousandSeparator={true}
                                             onValueChange={(value) => setAmount(value.floatValue)}
                                         />
                                         <label className='whitespace-nowrap lg:flex duration-200 transition-all ease-in-out absolute top-[-1.5rem] peer-focus:top-[-1.5rem] peer-focus:text-sm peer-focus:text-teal-500 peer-focus:font-semibold  peer-placeholder-shown:top-[0] peer-placeholder-shown:text-base text-sm pointer-events-none text-gray-500'>
-                                            Amount $
+                                            Amount {getSymbolFromCurrency(selectedAccount?.currency)}
                                         </label>
-
                                     </div>
 
                                 </div>

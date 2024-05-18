@@ -8,7 +8,8 @@ import Services from "../Services";
 import Footer from "../Footer";
 import { Parallax, Background } from "react-parallax";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Hero from "../Hero";
+import WhyChooseUs from "../WhyChooseUs";
 gsap.registerPlugin(TextPlugin);
 
 const Home = () => {
@@ -225,7 +226,11 @@ const Home = () => {
           </div>
         </div>
 
+        <Hero />
+
         <Intro />
+        <WhyChooseUs />
+
         <Services
           title="For People, Entrepreneurs and Business Men"
           description="Our bank is equiped with the right tools to grow both your personal and business incomex."
@@ -237,7 +242,7 @@ const Home = () => {
           description="Our bank is perfect for SMEs"
           image="/serviceTwo.png"
           services={serviceListTwo}
-          reversed
+          reversed={true}
         />
         <Services
           title="Large or enterprise level businesses"
