@@ -35,6 +35,8 @@ import { Watch } from "react-loader-spinner";
 import TransactionSkeleton from "../TransactionSkeleton/index.";
 import AccountSkeleton from "../AccountSkeleton";
 import getSymbolFromCurrency from "currency-symbol-map";
+import TransactionModal from "../Transactions/TransactionModal";
+import { AiOutlineEye } from "react-icons/ai";
 
 const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
   const stickyElement = useRef(null);
@@ -133,6 +135,8 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
         return commonClasses + "text-red-500 border-red-600";
       case "failed":
         return commonClasses + "text-red-500 border-red-600";
+      case "reversed":
+        return commonClasses + "text-red-500 border-red-500 ";
       case "complete":
         return commonClasses + "text-green-600 border-green-600";
       case "on-hold":
@@ -155,6 +159,21 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
   };
 
   
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [selectedTransaction, setSelectedTransaction] = useState(null);
+
+  const openModal = (transaction) => {
+    setSelectedTransaction(transaction);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedTransaction(null);
+    setModalIsOpen(false);
+  };
+
+ 
 
   return (
     <>
@@ -307,6 +326,16 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                   layout
                   className="bg-gray-100 h-full w-full row-span-2 row rounded-xl"
                 >
+                  <TransactionModal
+                    modalIsOpen={modalIsOpen}
+                    closeModal={closeModal}
+                    selectedTransaction={selectedTransaction}
+                    accounting={accounting}
+                    currencySymbol={currencySymbol}
+                    setModalIsOpen={setModalIsOpen}
+                    getStatusClassNames={getStatusClassNames}
+                  />
+
                   <div className="p-6">
                     <div className="flex justify-between mb-6 items-center">
                       <h1 className="font-semibold">Recent Transactions</h1>
@@ -329,9 +358,10 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                         return (
                           <div
                             key={transaction?._id}
-                            className="w-full my-3 border-b border-gray-300 pb-3"
+                            className="w-full my-2 pb-3 cursor-pointer border-b border-slate-200 hover:bg-slate-100 p-2  hover:px-3 hover:rounded-xl transition-all duration-100 ease-in-out"
+                            onClick={() => openModal(transaction)}
                           >
-                            <h1 className="font-semibold text-[.75rem] flex items-center uppercase">
+                            <h1 className="font-semibold text-[.75rem] flex items-center capitalize tracking-wide">
                               {transaction?.transactionType}
                               {transaction?.transactionType === "transfer" ? (
                                 <BsArrowUpRight className="text-red-500" />
@@ -339,7 +369,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                                 <BsArrowDownLeft className="text-green-600" />
                               )}
                             </h1>
-                            <div className="flex justify-between leading-5">
+                            <div className="flex justify-between items-center leading-5">
                               <div className="flex text-sm items-center">
                                 {transaction?.status === "pending" ? (
                                   <Watch
@@ -363,43 +393,47 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                                       : transaction?.status}
                                   </h1>
                                 )}
-                                <h1 className="mx-2 text-gray-500 text-[.8rem] font-light lg:font-normal ">
+                                {/* <h1 className="text-gray-500 mx-2 text-[.8rem] font-light lg:font-normal">
                                   {moment(transaction?.createdAt).format("LLL")}
-                                </h1>
-                                {isDiscoverCard ? (
-                                  <h1 className=" text-teal-600 font-extralight  text-center">
+                                </h1> */}
+                                {transaction?.isDiscoverCard ? (
+                                  <h1 className="text-teal-600 font-extralight text-center">
                                     ...7944 Discover Card
                                   </h1>
                                 ) : (
-                                  <h1 className=" text-gray-500  text-center ">
+                                  <h1 className="text-gray-500 text-center hidden md:block">
                                     ...
                                     {transaction?.accountId?.accountNumber.slice(
                                       -4
                                     )}{" "}
                                     {transaction?.accountId?.accountType}
                                   </h1>
-                                )}{" "}
+                                )}
                               </div>
                               <h1
-                        className={
-                          "font-semibold  whitespace-nowrap " +
-                          (transaction?.transactionType === "transfer"
-                            ? "text-red-500"
-                            : "text-[#00A389]")
-                        }
-                      >
-                        {transaction?.transactionType === "transfer"
-                          ? "-" +
-                            accounting.formatMoney(
-                              transaction?.amount,
-                              currencySymbol(transaction?.accountId?.currency)
-                            )
-                          : "+" +
-                            accounting.formatMoney(
-                              transaction?.amount,
-                              currencySymbol(transaction?.accountId?.currency)
-                            )}
-                      </h1>
+                                className={
+                                  "font-semibold whitespace-nowrap " +
+                                  (transaction?.transactionType === "transfer"
+                                    ? "text-red-500"
+                                    : "text-[#00A389]")
+                                }
+                              >
+                                {transaction?.transactionType === "transfer"
+                                  ? "-" +
+                                    accounting.formatMoney(
+                                      transaction?.amount,
+                                      currencySymbol(transaction?.accountId?.currency)
+                                    )
+                                  : "+" +
+                                    accounting.formatMoney(
+                                      transaction?.amount,
+                                      currencySymbol(transaction?.accountId?.currency)
+                                    )}
+                              </h1>
+                              <div className="flex text-xs underline items-center justify-center space-x-1">
+                                <AiOutlineEye className="text-gray-500 hover:text-gray-700 ml-2" />
+                                <span>view details</span>
+                              </div>
                             </div>
                           </div>
                         );

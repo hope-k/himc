@@ -17,6 +17,8 @@ import Skeleton from "react-loading-skeleton";
 import { motion } from "framer-motion";
 import TransactionSkeleton from "../TransactionSkeleton/index.";
 import getSymbolFromCurrency from "currency-symbol-map";
+import TransactionModal from "./TransactionModal";
+import { AiOutlineEye } from "react-icons/ai";
 
 const Transactions = () => {
   const dispatch = useDispatch();
@@ -49,6 +51,8 @@ const Transactions = () => {
         return commonClasses + "text-red-500 border-red-600";
       case "failed":
         return commonClasses + "text-red-500 border-red-600";
+      case "reversed":
+        return commonClasses + "text-red-500 border-red-500";
       case "complete":
         return commonClasses + "text-green-600 border-green-600";
       case "on-hold":
@@ -61,7 +65,21 @@ const Transactions = () => {
         return "font-semibold text-sm capitalize";
     }
   };
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  const [selectedTransaction, setSelectedTransaction] = useState(null);
+
+  const openModal = (transaction) => {
+    setSelectedTransaction(transaction);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedTransaction(null);
+    setModalIsOpen(false);
+  };
+
+ 
   return (
     <motion.div
       layout
@@ -71,12 +89,21 @@ const Transactions = () => {
         Transactions <GiChecklist className="ml-2 text-2xl text-white" />
       </h1>
       <div className="h-full pt-[20rem] lg:px-[16rem] md:px-[4rem] container px-4 z-50 relative">
-        <div className="bg-gray-100 w-full row rounded-xl h-full pt-3 shadow-2xl relative">
+        <div className="bg-white w-full row rounded-xl h-full pt-3 shadow-2xl relative">
           <div className="p-4 lg:p-6 relative">
             <div className="flex justify-between mb-6 items-center">
               <h1 className="font-semibold">Transactions</h1>
               <SearchIcon className="w-6" />
             </div>
+            <TransactionModal
+              modalIsOpen={modalIsOpen}
+              closeModal={closeModal}
+              selectedTransaction={selectedTransaction}
+              accounting={accounting}
+              currencySymbol={currencySymbol}
+              setModalIsOpen={setModalIsOpen}
+              getStatusClassNames={getStatusClassNames}
+            />
 
             {loading ? (
               <TransactionSkeleton numOfSkeletons={3} />
@@ -95,7 +122,8 @@ const Transactions = () => {
                 return (
                   <div
                     key={transaction?._id}
-                    className="w-full my-3 border-b border-gray-300 pb-3"
+                    className="w-full my-2 pb-3 cursor-pointer border-b border-slate-200 hover:bg-slate-100 p-2  hover:px-3 hover:rounded-xl transition-all duration-100 ease-in-out"
+                    onClick={() => openModal(transaction)}
                   >
                     <h1 className="font-semibold text-[.75rem] flex items-center capitalize tracking-wide">
                       {transaction?.transactionType}
@@ -105,7 +133,7 @@ const Transactions = () => {
                         <BsArrowDownLeft className="text-green-600" />
                       )}
                     </h1>
-                    <div className="flex justify-between  leading-5">
+                    <div className="flex justify-between items-center leading-5">
                       <div className="flex text-sm items-center">
                         {transaction?.status === "pending" ? (
                           <Watch
@@ -127,15 +155,15 @@ const Transactions = () => {
                               : transaction?.status}
                           </h1>
                         )}
-                        <h1 className=" text-gray-500 mx-2 text-[.8rem] font-light lg:font-normal">
+                        {/* <h1 className="text-gray-500 mx-2 text-[.8rem] font-light lg:font-normal">
                           {moment(transaction?.createdAt).format("LLL")}
-                        </h1>
-                        {isDiscoverCard ? (
-                          <h1 className=" text-teal-600 font-extralight text-center">
+                        </h1> */}
+                        {transaction?.isDiscoverCard ? (
+                          <h1 className="text-teal-600 font-extralight text-center">
                             ...7944 Discover Card
                           </h1>
                         ) : (
-                          <h1 className=" text-gray-500  text-center ">
+                          <h1 className="text-gray-500 text-center hidden md:block">
                             ...{transaction?.accountId?.accountNumber.slice(-4)}{" "}
                             {transaction?.accountId?.accountType}
                           </h1>
@@ -143,7 +171,7 @@ const Transactions = () => {
                       </div>
                       <h1
                         className={
-                          "font-semibold  whitespace-nowrap " +
+                          "font-semibold whitespace-nowrap " +
                           (transaction?.transactionType === "transfer"
                             ? "text-red-500"
                             : "text-[#00A389]")
@@ -161,6 +189,10 @@ const Transactions = () => {
                               currencySymbol(transaction)
                             )}
                       </h1>
+                      <div className='flex text-xs underline items-center justify-center space-x-1'>
+                        <AiOutlineEye className="text-gray-500 hover:text-gray-700 ml-2" />
+                        <span>view details</span>
+                      </div>
                     </div>
                   </div>
                 );
