@@ -52,7 +52,7 @@ const TransactionModal = ({
                   <p className="text-lg font-medium text-gray-900">
                     {accounting.formatMoney(
                       selectedTransaction.amount,
-                      currencySymbol(selectedTransaction)
+                      currencySymbol(selectedTransaction?.accountId?.currency)
                     )}
                   </p>
                 </div>
