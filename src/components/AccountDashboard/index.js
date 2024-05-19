@@ -231,7 +231,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
             <div
               ref={stickyElement}
               className={
-                "sticky top-0 my-16 bg-gray-100 rounded  text-gray-500 flex items-center p-4 justify-between lg:px-6 z-[60] " +
+                "sticky top-0 my-16 bg-gray-100 rounded  text-gray-500 flex items-center p-4 justify-between lg:px-6 z-40 " +
                 (dashTextOpacity === 0 && "shadow-2xl")
               }
             >

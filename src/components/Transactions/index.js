@@ -100,7 +100,6 @@ const Transactions = () => {
               closeModal={closeModal}
               selectedTransaction={selectedTransaction}
               accounting={accounting}
-              currencySymbol={currencySymbol}
               setModalIsOpen={setModalIsOpen}
               getStatusClassNames={getStatusClassNames}
             />

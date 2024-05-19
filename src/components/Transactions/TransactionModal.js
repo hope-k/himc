@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { motion } from "framer-motion";
+import getSymbolFromCurrency from "currency-symbol-map";
 
 const backdropVariants = {
   visible: { opacity: 1 },
@@ -17,20 +18,26 @@ const TransactionModal = ({
   closeModal,
   selectedTransaction,
   accounting,
-  currencySymbol,
   getStatusClassNames,
 }) => {
+  const currencySymbol = (currency) => {
+    if (currency) {
+      return getSymbolFromCurrency(currency);
+    } else {
+      return getSymbolFromCurrency("usd");
+    }
+  };
   return (
     modalIsOpen && (
       <motion.div
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[100]"
         variants={backdropVariants}
         initial="hidden"
         animate="visible"
         exit="hidden"
       >
         <motion.div
-          className="bg-white rounded-2xl shadow-xl max-w-md w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl p-6 relative m-4"
+          className="bg-white rounded-2xl shadow-xl max-w-md w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl p-6 relative m-4 z-[100]"
           variants={modalVariants}
           transition={{ duration: 0.3, type: "spring" }}
         >
