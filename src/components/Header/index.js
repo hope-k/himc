@@ -104,7 +104,7 @@ const Header = () => {
       )}
       <div
         className={
-          "drop-shadow-xl border-b-[.4px] border-slate-500 flex font-base text-base sticky top-0 z-[60] h-[3.5rem] " +
+          "drop-shadow-xl border-b-[.4px] border-slate-500 flex font-base text-base sticky top-0 z-40 h-[3.5rem] " +
           (isAuthenticated &&
             !pinVerified &&
             user?.role === "user" &&
@@ -119,7 +119,7 @@ const Header = () => {
       >
         <div
           className={
-            "px-4 md:px-10 flex p-3 justify-between w-full items-center " +
+            "px-4 md:px-10 flex p-3 justify-between w-full items-center  relative  " +
             (!pinVerified && isAuthenticated ? " lg:flex " : " lg:hidden  ")
           }
         >
@@ -129,7 +129,7 @@ const Header = () => {
                 ? true
                 : false
             }
-            className="w-[2.5rem] p-1 relative z-[50]"
+            className="w-[2.5rem] p-1 relative "
             onClick={() => toggleOpen()}
           >
             <svg viewBox="0 0 100 80" width="40" height="30">
@@ -164,7 +164,7 @@ const Header = () => {
               ></rect>
             </svg>
           </button>
-          <div className=" text-black text-sm bg-transparent p-2 font-semibold flex rounded-lg items-center z-40 relative ">
+          <div className=" text-black text-sm bg-transparent p-2 font-semibold flex rounded-lg items-center  relative ">
             <div
               className={
                 "text-sm bg-slate-100 p-2 rounded-lg " +
@@ -220,7 +220,7 @@ const Header = () => {
             {isAuthenticated && (
               <div className="ml-2 flex">
                 {user?.image?.url || user?.image ? (
-                  <motion.div className="flex items-center justify-center py-5  rounded-full">
+                  <motion.div className="flex items-center justify-center py-5 relative  rounded-full">
                     <motion.img
                       initial={{ x: 20, opacity: 0.1 }}
                       whileInView={{ x: 0, opacity: 1 }}

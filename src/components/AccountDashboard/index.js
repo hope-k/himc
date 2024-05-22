@@ -231,7 +231,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
             <div
               ref={stickyElement}
               className={
-                "sticky top-0 my-16 bg-gray-100 rounded  text-gray-500 flex items-center p-4 justify-between lg:px-6 z-40 " +
+                "sticky top-0 my-16 bg-gray-100 rounded  text-gray-500 flex items-center p-4 justify-between lg:px-6 z-[-1] " +
                 (dashTextOpacity === 0 && "shadow-2xl")
               }
             >
@@ -267,39 +267,35 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
             </div>
             <div className="">
               <div className={"mb-4 bg-gray-100 p-4 lg:p-[5rem] rounded-xl"}>
-                <motion.div layout className="flex flex-wrap justify-between">
+                <motion.div layout className="flex flex-wrap md:space-x-4">
                   {loading ? (
                     <AccountSkeleton />
-                  ) : !accounts?.length ? (
-                    <div className="w-full p-10 text-2xl text-red-600 bg-gray-200 rounded-3xl font-extralight">
+                  ) : accounts?.length === 0 ? (
+                    <div className="w-full p-10 text-xl text-red-600 bg-gray-200 rounded-xl font-montserrat font-extralight">
                       !!NO ACCOUNTS OPENED CONTACT ADMIN!!
                     </div>
                   ) : (
                     accounts?.map((account) => (
                       <div
-                        key={account?._id}
-                        className=" cursor-pointer bg-[#3ebde4] h-fit lg:w-[25rem] w-[20rem] rounded-md text-gray-50 relative border-none mb-4  lg:mb-2 "
-                      >
-                        <h1 className="border-t-2 mt-1 border-teal-500 bg-blue-100 px-6  font-semibold text-gray-600 text-sm">
-                          ...{account?.accountNumber.slice(-4)}{" "}
-                          {account?.accountType}
+                      key={account?._id}
+                      className="cursor-pointer bg-gradient-to-r from-teal-500 to-teal-700 h-fit  w-[18rem] rounded-lg text-white relative border-none mb-4 lg:mb-2 p-3 transition-transform transform hover:scale-[1.01]"
+                    >
+                      <div className="flex justify-between  mb-1 border-b border-teal-500 pb-1">
+                        <h1 className="font-semibold text-sm capitalize">
+                          {account?.accountType} account ...{account?.accountNumber.slice(-4)}
                         </h1>
-                        <div className="px-10">
-                          <div className="border-l-8 pl-3 border-teal-600 bg-[#009cd0] rounded-lg">
-                            <h1 className="font-light text-sm">
-                              {" "}
-                              Available Balance
-                            </h1>
-                            <h1 className="font-semibold text-[.92rem]">
-                              {accounting.formatMoney(
-                                account?.balance,
-                                currencySymbol(account?.currency)
-                              )}
-                            </h1>
-                          </div>
+                        <div className="bg-teal-600 p-2 rounded-full">
+                          
                         </div>
-                        <div className="bg-[#7cd3ee28] absolute h-[2rem] rounded-t-[10rem] rounded-br-[6rem] bottom-0  w-[4rem] right-0 "></div>
                       </div>
+                      <div className="text-start">
+                        <h1 className="text-[17px] font-semibold font-poppins tracking-wide">
+                          {accounting.formatMoney(account?.balance, currencySymbol(account?.currency))}
+                        </h1>
+                        <h1 className="font-light text-sm  text-gray-200 ">Available Balance</h1>
+                      </div>
+                    </div>
+                    
                     ))
                   )}
                 </motion.div>
