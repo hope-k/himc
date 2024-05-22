@@ -43,6 +43,7 @@ const Transactions = () => {
       return getSymbolFromCurrency("usd");
     }
   };
+
   const getStatusClassNames = (status) => {
     const commonClasses =
       "font-semibold text-xs capitalize border-l p-[0.2rem] rounded-sm ";
@@ -83,12 +84,12 @@ const Transactions = () => {
   return (
     <motion.div
       layout
-      className="lg:w-[83.6%] lg:absolute lg:right-0 z-50 relative "
+      className="lg:w-[83.6%] lg:absolute lg:right-0 z-30  relative "
     >
       <h1 className="lg:px-[7rem] top-[15rem] p-4 text-white font-semibold text-xl flex items-center fixed lg:top-40">
         Transactions <GiChecklist className="ml-2 text-2xl text-white" />
       </h1>
-      <div className="h-full pt-[20rem] lg:px-[16rem] md:px-[4rem] container px-4 z-50 relative">
+      <div className="h-full pt-[20rem] lg:px-[16rem] md:px-[4rem] container px-4  relative">
         <div className="bg-white w-full row rounded-xl h-full pt-3 shadow-2xl relative">
           <div className="p-4 lg:p-6 relative">
             <div className="flex justify-between mb-6 items-center">

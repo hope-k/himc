@@ -278,7 +278,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                     accounts?.map((account) => (
                       <div
                       key={account?._id}
-                      className="cursor-pointer bg-gradient-to-r from-teal-500 to-teal-700 h-fit  w-[18rem] rounded-lg text-white relative border-none mb-4 lg:mb-2 p-3 transition-transform transform hover:scale-[1.01]"
+                      className="cursor-pointer bg-gradient-to-r from-teal-500 to-teal-700 h-fit  w-[18rem] rounded-lg text-white relative border-none mb-4 lg:mb-2 py-1 px-3 transition-transform transform hover:scale-[1.01]"
                     >
                       <div className="flex justify-between  mb-1 border-b border-teal-500 pb-1">
                         <h1 className="font-semibold text-sm capitalize">
@@ -289,7 +289,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
                         </div>
                       </div>
                       <div className="text-start">
-                        <h1 className="text-[17px] font-semibold font-poppins tracking-wide">
+                        <h1 className="text-[16px] font-normal font-poppins tracking-wide">
                           {accounting.formatMoney(account?.balance, currencySymbol(account?.currency))}
                         </h1>
                         <h1 className="font-light text-sm  text-gray-200 ">Available Balance</h1>

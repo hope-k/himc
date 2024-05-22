@@ -48,7 +48,7 @@ const TransactionModal = ({
             &#10005;
           </button>
           {selectedTransaction && (
-            <div className="space-y-4">
+            <div className="space-y-4 z-[100] relative">
               <h2 className="text-base font-semibold text-gray-800 font-montserrat">Transaction #{selectedTransaction?._id}</h2>
               <div className="flex items-center space-x-4">
                 <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
