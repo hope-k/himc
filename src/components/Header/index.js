@@ -104,7 +104,7 @@ const Header = () => {
       )}
       <div
         className={
-          "drop-shadow-xl border-b-[.4px] border-slate-500 flex font-base text-base sticky top-0 z-40 h-[3.5rem] " +
+          "drop-shadow-xl border-b-[.4px] border-slate-500 flex font-base text-base sticky top-0 z-[60] h-[3.5rem] " +
           (isAuthenticated &&
             !pinVerified &&
             user?.role === "user" &&
@@ -119,7 +119,7 @@ const Header = () => {
       >
         <div
           className={
-            "px-4 md:px-10 flex p-3 justify-between w-full items-center  relative  " +
+            "px-4 md:px-10 flex p-3 justify-between w-full items-center  relative  z-[60]" +
             (!pinVerified && isAuthenticated ? " lg:flex " : " lg:hidden  ")
           }
         >
