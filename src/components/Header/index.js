@@ -169,12 +169,12 @@ const Header = () => {
               className={
                 "text-sm bg-slate-100 p-2 rounded-lg " +
                 (isAuthenticated &&
-                  "text-gray-100 bg-teal-500 rounded-full p-4 cursor-pointer")
+                  "text-gray-100 bg-teal-500 rounded-full p-2 cursor-pointer")
               }
             >
               {!loading && isAuthenticated ? (
                 <div onClick={() => toggleProfileOpen()}>
-                  <h1 className="px-4">{user?.firstName}</h1>
+                  <h1 className="px-4 ">{user?.firstName}</h1>
 
                   <div
                     className={

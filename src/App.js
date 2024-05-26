@@ -29,7 +29,7 @@ import Pin from './components/Pin';
 import PinAuth from './components/PinAuth';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-
+import {NextUIProvider} from "@nextui-org/react";
 
 
 
