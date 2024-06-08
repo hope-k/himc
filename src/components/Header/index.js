@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import MobileNav from "../MobileNav";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import {
+  ChevronDownIcon,
+  InformationCircleIcon,
+} from "@heroicons/react/outline";
 import { logout } from "../../redux/Slices/authSlice";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,17 +22,78 @@ const Header = () => {
 
   const menus = [
     {
-      title: "Banking",
-      submenus: ["Home & Mortgages", "Credit Cards", "Checking & Savings"],
+      title: "Personal",
+      submenus: [
+        {
+          name: "Checking",
+          link: "https://www.thedime.bank/personal/checking",
+        },
+        {
+          name: "Savings & CDs",
+          link: "https://www.thedime.bank/personal-savings-and-cds",
+        },
+        {
+          name: "Online & Mobile Banking",
+          link: "https://www.thedime.bank/personal/online-and-mobile-banking",
+        },
+        {
+          name: "Credit Cards",
+          link: "https://www.thedime.bank/credit-cards",
+        },
+        {
+          name: "Debit Cards",
+          link: "https://www.thedime.bank/debit-card",
+        },
+      ],
     },
     {
-      title: "Online Access",
-      submenus: ["Mobile Banking", "Bill Pay"],
+      title: "Lending",
+      submenus: [
+        {
+          name: "Business",
+          link: "https://www.thedime.bank/business/lending",
+        },
+        {
+          name: "Loan Payment Options",
+          link: "https://www.thedime.bank/loan-payment-options",
+        },
+        {
+          name: "Financial Calculators",
+          link: "https://www.thedime.bank/financial-calculators",
+        },
+      ],
     },
     {
-      title: "Loans",
-      submenus: ["Insurance", "Financial Planning"],
+      title: "Business",
+      submenus: [
+        {
+          name: "Order checks",
+          link: "https://orderpoint.deluxe.com/personal-checks/welcome.htm",
+        },
+        { name: "Checking", link: "https://www.thedime.bank/business/checking" },
+        {
+          name:"Cash Management & Business Services", 
+          link:"https://www.thedime.bank/business/cash-management-and-business-services"
+        }
+      ],
     },
+    {
+      title: "Digital",
+      submenus: [
+        {
+          name: "Personal Digital Banking",
+          link: "https://www.thedime.bank/personal/online-and-mobile-banking"
+        }, 
+        {
+          name: "Business Digital Banking",
+          link: "https://www.thedime.bank/business/cash-management-and-business-services"
+        },
+        {
+          name: "Digital banking Tutorials",
+          link: "https://www.thedime.bank/digital-banking-tutorials"
+        }
+      ]
+    }
   ];
 
   const toggleOpen = () => {
@@ -47,6 +111,18 @@ const Header = () => {
 
   return (
     <>
+      <div className="bg-[#102c52]   p-4  w-full ">
+        <div className=" h-full  flex w-full items-center justify-center gap-2">
+          <div>
+            <InformationCircleIcon className="w-4 h-4 stroke-[#ccc]" />
+          </div>
+          <h3 className="text-xs font-semibold text-[#ccc]">
+            Important Notice: We've teamed up with The Dime Bank. Occasionally,
+            you'll be redirected to their site for security checks. Your safety
+            is our priority. Thanks for your support!
+          </h3>
+        </div>
+      </div>
       <MobileNav open={open} toggleOpen={toggleOpen} />
 
       {loading ? (
@@ -79,9 +155,7 @@ const Header = () => {
                   <div className="text-slate-600 font-bold text-sm">
                     +61 3 9854 4666{" "}
                   </div>
-                  <div className="text-slate-500 text-sm">
-                    himc@support.com
-                  </div>
+                  <div className="text-slate-500 text-sm">himc@support.com</div>
                 </div>
               </div>
               <div className="flex mr-[4rem] whitespace-nowrap">
@@ -174,7 +248,7 @@ const Header = () => {
             >
               {!loading && isAuthenticated ? (
                 <div onClick={() => toggleProfileOpen()}>
-                  <h1 className="px-4 ">{user?.firstName}</h1>
+                  <h1 className="px-4 "> {user?.firstName} </h1>
 
                   <div
                     className={
@@ -241,7 +315,7 @@ const Header = () => {
         </div>
 
         {!isAuthenticated && (
-          <div className=" hidden container lg:flex px-[10rem] items-center text-[#665522] justify-center">
+          <div className=" hidden container lg:flex px-[10rem] items-center text-[#223266] justify-center">
             <div className="flex w-full">
               {menus.map((menu, index) => (
                 <div
@@ -250,50 +324,47 @@ const Header = () => {
                   onMouseEnter={() => setOpenMenu(index)}
                   onMouseLeave={() => setOpenMenu(null)}
                 >
-                  <Link
-                    to="/sign-in"
-                    className="duration-200 p-4 hover:text-white hover:bg-[#605111] flex items-center font-montserrat"
-                  >
+                  <div className="duration-200 p-4 hover:text-white text-sm font-semibold hover:bg-[#102c52] flex items-center font-montserrat">
                     {menu.title}
                     <ChevronDownIcon
                       className={`ml-2 h-5 w-5 transform ${
                         openMenu === index ? "rotate-180" : ""
                       } transition-transform duration-200`}
                     />
-                  </Link>
-                    {openMenu === index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ type: "spring", bounce: 0, duration:.15 }}
-                        className="absolute left-0 w-40 mt-2 p-2 bg-white shadow-lg rounded-md"
-                      >
-                        {menu.submenus.map((submenu, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to="/sign-in"
-                            className="block p-2 hover:bg-[#605111] hover:rounded-lg hover:text-white duration-100 text-sm font-poppins"
-                          >
-                            {submenu}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
+                  </div>
+                  {openMenu === index && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ type: "spring", bounce: 0, duration: 0.15 }}
+                      className="absolute left-0 w-40  p-2 bg-white  rounded-b-md"
+                    >
+                      {menu.submenus.map((submenu, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          to={submenu?.link}
+                          className="block p-2 hover:bg-[#102c52] hover:rounded-lg hover:text-white duration-100 text-[13px] font-semibold font-poppins"
+                        >
+                          {submenu?.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
                 </div>
               ))}
             </div>
 
-            <div className="flex">
+            <div className="flex font-semibold text-sm">
               <Link
                 to="/register"
-                className="duration-200 p-4  whitespace-nowrap hover:text-white hover:bg-[#605111]"
+                className="duration-200 p-4  whitespace-nowrap hover:text-white hover:bg-[#102c52]"
               >
                 Request Account
               </Link>
               <Link
                 to="/sign-in"
-                className="whitespace-nowrap duration-200 p-4 flex hover:text-white hover:bg-[#605111] text-[#665522] font-semibold"
+                className="whitespace-nowrap duration-200 p-4   flex hover:text-white hover:bg-[#102c52] text-[#102c52] "
               >
                 Sign On
                 <div className="ml-2 pt-[2px]">
