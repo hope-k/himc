@@ -144,15 +144,35 @@ const MobileNav = ({ open, toggleOpen }) => {
         {
           name: "Digital banking Tutorials",
           // link: "https://www.thedime.bank/digital-banking-tutorials",
-                    link: '/sign-in'
+          link: '/sign-in'
 
         },
       ],
     },
+    {
+        title: "Customer Support",
+        submenus: [
+          {
+            name: "Contact Us",
+            // link: "https://www.thedime.bank/contact-us-securely",
+            link: '/sign-in'
+
+          },
+          {
+            name: "Lost or Stolen Card",
+            // link: "https://www.thedime.bank/debit-card",
+            link: '/sign-in'
+
+          }
+       
+        ],
+
+    },
+    {
+      title: "Account",
+      submenus: [{ name: "Open an Account", link: "/register" }],
+    },
   ];
-  useEffect(() => {
-    console.log("--->>>>>", openMenu);
-  }, [openMenu]);
 
   return (
     <>
