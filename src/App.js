@@ -30,6 +30,9 @@ import PinAuth from './components/PinAuth';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import {NextUIProvider} from "@nextui-org/react";
+import CashManagement from './components/CashManagement';
+import Business from './components/Business';
+import LoanPaymentOptions from './components/LoanPaymentOptions';
 
 
 
@@ -106,7 +109,10 @@ function App() {
 
           <Route path='/*' element={<Authenticated auth={isAuthenticated} role={user?.role} />}>
             <Route path="sign-in" element={<LoginPage />} />
+            <Route path="cash-management" element={<CashManagement />} />
+            <Route path="business" element={<Business />} />
             <Route path="register" element={<RegisterPage />} />
+            <Route path="loan-payment-options" element={<LoanPaymentOptions />} />
           </Route>
 
 

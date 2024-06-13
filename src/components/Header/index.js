@@ -26,23 +26,32 @@ const Header = () => {
       submenus: [
         {
           name: "Checking",
-          link: "https://www.thedime.bank/personal/checking",
+          // link: "https://www.thedime.bank/personal/checking",
+          link: '/sign-in'
         },
         {
           name: "Savings & CDs",
-          link: "https://www.thedime.bank/personal-savings-and-cds",
+          // link: "https://www.thedime.bank/personal-savings-and-cds",
+          link: '/sign-in'
+
         },
         {
           name: "Online & Mobile Banking",
-          link: "https://www.thedime.bank/personal/online-and-mobile-banking",
+          // link: "https://www.thedime.bank/personal/online-and-mobile-banking",
+          link: '/sign-in'
+
         },
         {
           name: "Credit Cards",
-          link: "https://www.thedime.bank/credit-cards",
+          // link: "https://www.thedime.bank/credit-cards",
+          link: '/sign-in'
+
         },
         {
           name: "Debit Cards",
-          link: "https://www.thedime.bank/debit-card",
+          // link: "https://www.thedime.bank/debit-card",
+          link: '/sign-in'
+
         },
       ],
     },
@@ -51,15 +60,19 @@ const Header = () => {
       submenus: [
         {
           name: "Business",
-          link: "https://www.thedime.bank/business/lending",
+          // link: "https://www.thedime.bank/business/lending",
+          link: "/business",
         },
         {
           name: "Loan Payment Options",
-          link: "https://www.thedime.bank/loan-payment-options",
+          // link: "https://www.thedime.bank/loan-payment-options",
+          link: "/loan-payment-options",
         },
         {
           name: "Financial Calculators",
-          link: "https://www.thedime.bank/financial-calculators",
+          // link: "https://www.thedime.bank/financial-calculators",
+          link: '/sign-in'
+
         },
       ],
     },
@@ -68,13 +81,21 @@ const Header = () => {
       submenus: [
         {
           name: "Order checks",
-          link: "https://orderpoint.deluxe.com/personal-checks/welcome.htm",
+          // link: "https://orderpoint.deluxe.com/personal-checks/welcome.htm",
+          link: '/sign-in'
+
         },
-        { name: "Checking", link: "https://www.thedime.bank/business/checking" },
         {
-          name:"Cash Management & Business Services", 
-          link:"https://www.thedime.bank/business/cash-management-and-business-services"
-        }
+          name: "Checking",
+          // link: "https://www.thedime.bank/business/checking",
+          link: '/sign-in'
+
+        },
+        {
+          name: "Cash Management & Business Services",
+          // link:"https://www.thedime.bank/business/cash-management-and-business-services"
+          link: "/cash-management",
+        },
       ],
     },
     {
@@ -82,20 +103,25 @@ const Header = () => {
       submenus: [
         {
           name: "Personal Digital Banking",
-          link: "https://www.thedime.bank/personal/online-and-mobile-banking"
-        }, 
+          // link: "https://www.thedime.bank/personal/online-and-mobile-banking",
+          link: '/sign-in'
+
+        },
         {
           name: "Business Digital Banking",
-          link: "https://www.thedime.bank/business/cash-management-and-business-services"
+          // link: "https://www.thedime.bank/business/cash-management-and-business-services",
+          link: '/sign-in'
+
         },
         {
           name: "Digital banking Tutorials",
-          link: "https://www.thedime.bank/digital-banking-tutorials"
-        }
-      ]
-    }
-  ];
+          // link: "https://www.thedime.bank/digital-banking-tutorials",
+          link: '/sign-in'
 
+        },
+      ],
+    },
+  ];
   const toggleOpen = () => {
     setOpen(!open);
   };
@@ -111,7 +137,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-[#102c52]   p-4  w-full ">
+      {/* <div className="bg-[#102c52]   p-4  w-full relative z-20">
         <div className=" h-full  flex w-full items-center justify-center gap-2">
           <div>
             <InformationCircleIcon className="w-4 h-4 stroke-[#ccc]" />
@@ -122,7 +148,7 @@ const Header = () => {
             is our priority. Thanks for your support!
           </h3>
         </div>
-      </div>
+      </div> */}
       <MobileNav open={open} toggleOpen={toggleOpen} />
 
       {loading ? (
@@ -153,7 +179,7 @@ const Header = () => {
                 </div>
                 <div>
                   <div className="text-slate-600 font-bold text-sm">
-                    +61 3 9854 4666{" "}
+                    +44 74 76487323{" "}
                   </div>
                   <div className="text-slate-500 text-sm">himc@support.com</div>
                 </div>
