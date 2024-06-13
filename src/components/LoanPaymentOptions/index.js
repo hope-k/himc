@@ -19,7 +19,7 @@ const LoanPaymentOptions = () => {
       content: (
         <div className="space-y-6">
           <span>
-            Conveniently transfer funds from your Dime Bank checking or savings
+            Conveniently transfer funds from your HIMC Capital checking or savings
             account to pay your loan. You can even set these to recur monthly!
           </span>
           <ul className="list-disc list-inside">
@@ -70,12 +70,12 @@ const LoanPaymentOptions = () => {
       content: (
         <div>
           <span>
-            Transfer funds at no cost to you from another Dime Bank account
-            through our toll-free telephone banking service, 1-866-Dial My Dime
-            (1-866-342-5693).
+            Transfer funds at no cost to you from another HIMC Capita; account
+            through our toll-free telephone banking service, (+44 74 7648 7323)
           </span>
+          
           <span>
-            Call Loan Servicing at 570-253-1970, x 7767 (there is a fee for a
+            Call Loan Servicing at (+44 74 7648 7323) (there is a fee for a
             live telephone transfer).
           </span>
         </div>
@@ -116,7 +116,7 @@ const LoanPaymentOptions = () => {
           <div className="flex-[1.8]">
             <h3 className="font-poppins mb-6">
               HIMC Capital offers several convenient ways for you to pay down or
-              make a payment on your Dime Bank loan(s). We appreciate you
+              make a payment on your HIMC Capital loan(s). We appreciate you
               choosing HIMC Capital and offer you easy and secure options to
               repay your loans.
             </h3>

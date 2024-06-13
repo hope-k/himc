@@ -133,7 +133,8 @@ const Home = () => {
 
               <div className="flex font-light text-[#ccc] flex-col md:flex-row  md:pt-1 py-[2rem] ">
                 <Link
-                  to="https://www.thedime.bank/personal/online-and-mobile-banking"
+                  to={"/sign-in"}
+                  // to="https://www.thedime.bank/personal/online-and-mobile-banking"
                   id="bankings"
                   className=" mr-20 cursor-pointer hover:text-blue-300 duration-500 hover:border-b-4 pb-4 border-cyan-700 mb-4 "
                 >
@@ -163,7 +164,8 @@ const Home = () => {
                 </Link>
 
                 <Link
-                  to="https://www.thedime.bank/open-an-account"
+                  to={"sign-in"}
+                  // to="https://www.thedime.bank/open-an-account"
                   id="bankings"
                   className="mr-20  cursor-pointer hover:text-blue-300 duration-500 hover:border-b-4 pb-4 border-cyan-700  mb-4 "
                 >
@@ -193,7 +195,8 @@ const Home = () => {
                 </Link>
 
                 <Link
-                  to="https://www.thedime.bank/business/business-online-and-mobile-banking"
+                to={'/sign-in'}
+                  // to="https://www.thedime.bank/business/business-online-and-mobile-banking"
                   id="bankings"
                   className="mr-20 cursor-pointer hover:text-blue-300 duration-500 hover:border-b-4  border-cyan-700"
                 >
