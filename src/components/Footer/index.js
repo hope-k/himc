@@ -28,15 +28,20 @@ const Footer = () => {
                 <h1 className='font-semibold text-lg mb-3'>Address</h1>
                 <ul className='text-[#6084a4] max-w-lg text-[14.5px]'>
                     <ul>
-                        <li><b>New Zealand Address :</b> 23 Albert Street, Auckland Central, New Zealand</li>
-                        <li><b>Phone : </b> +64 29 307 8322</li>
+                        <li><b>United Kingdom :</b>31 Hurst St, Birmingham B5 4BD, UK</li>
+                        <li><b>Phone : </b> +44 74 76487323</li>
                     </ul>
                     <ul className='my-3'>
-                        <li><b>Malaysia Address :</b> 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia</li>
+                        <li><b>New Zealand :</b> Victoria St West, Auckland CBD Auckland 1010, New Zealand</li>
                         <li><b>Phone : </b> +60166322306</li>
                     </ul>
                     <ul>
-                        <li><b>China address :</b> 6 Jianguomen Outer Street Beijing, China
+                        <li><b>China address :</b> 5016 Shennan E Rd Luo Hu Qu, Shen Zhen Shi, Guang Dong Sheng, China, 518010
+                        </li>
+                        <li><b>Phone:</b> +86 42 6592 2681</li>
+                    </ul>
+                    <ul>
+                        <li><b>Malaysia:</b> 157, Jln Ampang, Kuala Ampang, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia
                         </li>
                         <li><b>Phone:</b> +86 42 6592 2681</li>
                     </ul>

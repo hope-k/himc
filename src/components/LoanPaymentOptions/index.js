@@ -70,29 +70,20 @@ const LoanPaymentOptions = () => {
       content: (
         <div>
           <span>
-            Transfer funds at no cost to you from another HIMC Capita; account
-            through our toll-free telephone banking service, (+44 74 7648 7323)
+            Transfer funds at no cost to you from another HIMC Capital account
+            through our toll-free telephone banking service, 
           </span>
           
-          <span>
-            Call Loan Servicing at (+44 74 7648 7323) (there is a fee for a
-            live telephone transfer).
-          </span>
+        
         </div>
       ),
     },
     {
       title: "by mail",
       content: (
-        <div>
-          HIMC Capital
-          <br />
-          Loan Servicing
-          <br />
-          PO Box 509
-          <br />
-          Honesdale PA 18431
-        </div>
+        <a href='mailto:support@himccapital.com'>
+          support@himccapital.com
+        </a>
       ),
     },
   ];

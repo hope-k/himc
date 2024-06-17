@@ -23,7 +23,7 @@ const Hero = () => {
           <img
             src="/hero/hero.png"
             alt="Professional person managing finances"
-            className="rounded-lg shadow-lg w-full max-w-md"
+            className="rounded-lg w-full max-w-md"
           />
         </div>
       </main>
