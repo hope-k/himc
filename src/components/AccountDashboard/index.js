@@ -112,10 +112,12 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
       );
     }
   };
+
   const logoutUser = () => {
     dispatch(logout());
     navigate(0);
   };
+
   const recentTransactions = transactions && transactions.slice(0, 4);
   const recentMessages = messages && messages && messages.slice(0, 2);
 
@@ -198,7 +200,7 @@ const AccountDashboard = ({ toggleProfileDropdown, profileDropdown }) => {
               initial={{ y: 15, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.85, ease: "easeInOut" }}
-              className="text-2xl font-light p-4 flex"
+              className="lg:text-2xl text-sm font-light p-4 flex"
             >
               {showGreet()}, {user?.firstName}
             </motion.div>

@@ -269,7 +269,7 @@ const Header = () => {
               className={
                 "text-sm bg-slate-100 p-2 rounded-lg " +
                 (isAuthenticated &&
-                  "text-gray-100 bg-teal-500 rounded-full p-2 cursor-pointer")
+                  "text-gray-100 bg-teal-500 rounded-full  cursor-pointer")
               }
             >
               {!loading && isAuthenticated ? (
