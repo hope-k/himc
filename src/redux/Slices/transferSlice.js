@@ -8,7 +8,7 @@ export const makeTransfer = createAsyncThunk('/makeTransfer', async (transferDet
     try {
         const state = getState();
         const token = state.auth?.token
-        const { data } = await instance.post('/api/add-transaction', { payeeAccountNumber, payeeRoutingNumber, confirmAccountNumber, amount, accountId, memo }, {
+        const { data } = await instance.post('/api/add-transaction', { payeeAccountNumber, payeeRoutingNumber, confirmAccountNumber, amount, accountId, memo, bankName }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

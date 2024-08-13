@@ -96,6 +96,10 @@ const TransactionModal = ({
                   <p className="text-gray-500 text-base">Memo</p>
                   <p className="text-gray-900 text-sm capitalize">{selectedTransaction?.memo}</p>
                 </div>
+                <div>
+                  <p className="text-gray-500 text-base">Bank Name</p>
+                  <p className="text-gray-900 text-sm capitalize">{selectedTransaction?.bankName}</p>
+                </div>
               </div>
               <div className="border-t border-gray-200 pt-4">
                 <button

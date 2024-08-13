@@ -45,19 +45,19 @@ const Users = () => {
     }, [editField, editID, editValue, dispatch]);
 
     const columns = [
-        { field: 'id', headerName: 'User ID', width: 300 },
-        { field: 'pin', headerName: 'User PIN', width: 150, editable: true },
+        { field: 'id', headerName: 'User ID' },
+        { field: 'pin', headerName: 'User PIN', width: 80, editable: true },
         { field: 'firstName', headerName: 'First name', editable: true },
         { field: 'lastName', headerName: 'Last name', editable: true },
         { field: 'status', headerName: 'Status', editable: true },
         { field: 'image', headerName: 'Image', editable: true, width: 250 },
-        { field: 'username', headerName: 'User Name', editable: true },
+        { field: 'username', headerName: 'User Name', editable: true, width: 80 },
         { field: 'email', headerName: 'Email', editable: true },
         { field: 'role', headerName: 'Role', editable: true },
         { field: 'dob', headerName: 'DOB', editable: true },
-        { field: 'phone', headerName: 'Phone', editable: true, width: 151 },
+        { field: 'phone', headerName: 'Phone', editable: true, width: 80 },
         { field: 'ssn', headerName: 'SSN', editable: true },
-        { field: 'address', headerName: 'Address', editable: true, width: 250 },
+        { field: 'address', headerName: 'Address', editable: true, width: 140 },
     ]
 
 

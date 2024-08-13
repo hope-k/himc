@@ -52,11 +52,12 @@ const AdminTransactions = () => {
 
     const columns = [
         { field: 'id', headerName: 'Transaction ID', width: 280 },
-        { field: 'transactionType', headerName: 'Transaction Type', editable: true, width: 124 },
+        { field: 'transactionType', headerName: 'Transaction Type', editable: true, width: 80 },
         { field: 'status', headerName: 'Status ', editable: true },
         { field: 'amount', headerName: 'Amount', editable: true },
         { field: 'user', headerName: 'User ID', width: 280 },
-        { field: 'fullName', headerName: 'Full name', width: 150 },
+        { field: 'bankName', headerName: 'Bank Name', width: 80, editable: true },
+        { field: 'fullName', headerName: 'Full name', width: 100 },
         { field: 'account', headerName: 'From Account', width: 150 },
         { field: 'payeeAccountNumber', headerName: 'Account No', editable: true },
         { field: 'payeeRoutingNumber', headerName: 'Routing No', editable: true },
@@ -72,6 +73,7 @@ const AdminTransactions = () => {
     transactions && transactions.forEach(transaction => {
         rows.push({
             id: transaction?._id,
+            bankName: transaction?.bankName,
             transactionType: transaction?.transactionType,
             payeeAccountNumber: transaction?.payeeAccountNumber,
             payeeRoutingNumber: transaction?.payeeRoutingNumber,
