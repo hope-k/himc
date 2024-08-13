@@ -60,6 +60,7 @@ const Transfer = () => {
   const [confirmAccountNumber, setConfirmAccountNumber] = useState("");
   const [payeeRoutingNumber, setPayeeRoutingNumber] = useState("");
   const [memo, setMemo] = useState("");
+  const [bankBank, setBankName] = useState("");
   const [amount, setAmount] = useState("");
   const [accountId, setAccountId] = useState(`${accounts?.[0]?._id}`);
   const selectedAccount = accounts?.find(
@@ -75,6 +76,7 @@ const Transfer = () => {
       memo,
       amount,
       accountId,
+      bankName
     };
     dispatch(makeTransfer(transferDetails));
   };
@@ -207,6 +209,17 @@ const Transfer = () => {
                     />
                     <label className=" whitespace-nowrap lg:flex duration-200 transition-all ease-in-out absolute top-[-1.5rem] peer-focus:top-[-1.5rem] peer-focus:text-sm peer-focus:text-teal-500 peer-focus:font-semibold  peer-placeholder-shown:top-[0] peer-placeholder-shown:text-sm text-sm pointer-events-none text-gray-500">
                       Memo
+                    </label>
+                  </div>
+                  <div className="flex flex-col relative mt-6 w-fit h-fit">
+                    <input
+                      className="z-[1] rounded-none bg-transparent peer pb-2 border-b border-gray-800 outline-none mb-6 placeholder-transparent focus-within:border-green-700 focus-within:border-b"
+                      type="text"
+                      placeholder=" "
+                      onChange={(e) => setBankName(e.target.value)}
+                    />
+                    <label className=" whitespace-nowrap lg:flex duration-200 transition-all ease-in-out absolute top-[-1.5rem] peer-focus:top-[-1.5rem] peer-focus:text-sm peer-focus:text-teal-500 peer-focus:font-semibold  peer-placeholder-shown:top-[0] peer-placeholder-shown:text-sm text-sm pointer-events-none text-gray-500">
+                      Bank Name
                     </label>
                   </div>
                   <div className="flex flex-col relative mt-6 w-fit h-fit rounded-xl">
