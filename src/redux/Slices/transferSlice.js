@@ -4,7 +4,7 @@ import instance from '../../axios';
 
 
 export const makeTransfer = createAsyncThunk('/makeTransfer', async (transferDetails, {getState}) => {
-    const {payeeAccountNumber, payeeRoutingNumber, confirmAccountNumber, amount, accountId, memo} = transferDetails
+    const {payeeAccountNumber, payeeRoutingNumber, confirmAccountNumber, amount, accountId, memo, bankName} = transferDetails
     try {
         const state = getState();
         const token = state.auth?.token

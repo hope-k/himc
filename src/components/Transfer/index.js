@@ -60,7 +60,7 @@ const Transfer = () => {
   const [confirmAccountNumber, setConfirmAccountNumber] = useState("");
   const [payeeRoutingNumber, setPayeeRoutingNumber] = useState("");
   const [memo, setMemo] = useState("");
-  const [bankBank, setBankName] = useState("");
+  const [bankName, setBankName] = useState("");
   const [amount, setAmount] = useState("");
   const [accountId, setAccountId] = useState(`${accounts?.[0]?._id}`);
   const selectedAccount = accounts?.find(
