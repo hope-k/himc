@@ -27,8 +27,9 @@ const LoginPage = () => {
     useEffect(() => {
 
         if (error?.length) {
+            
             error?.forEach(err => {
-                notify(err, { title: 'Please Check Your Credentials', showDismissButton: true, status: err.includes('processed') ? 'loading' : 'error' })
+                notify(err, { title: err.includes('disabled') ? 'Account Disabled': 'Please Check Your Credentials' , showDismissButton: true, status: err.includes('processed') ? 'loading' : err.includes('disabled') ? 'info': 'error' })
             })
             dispatch(resetAuthError());
         }
