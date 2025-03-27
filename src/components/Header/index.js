@@ -181,7 +181,7 @@ const Header = () => {
                   <div className="text-slate-600 font-bold text-sm">
                     +44 74 76487323{" "}
                   </div>
-                  <div className="text-slate-500 text-sm">himc@support.com</div>
+                  <div className="text-slate-500 text-sm">support@himccapital.com</div>
                 </div>
               </div>
               <div className="flex mr-[4rem] whitespace-nowrap">
