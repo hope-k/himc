@@ -45,6 +45,10 @@ const Footer = () => {
                         </li>
                         <li><b>Phone:</b> +86 42 6592 2681</li>
                     </ul>
+                    <ul>
+                        <li><b>Norway:</b> Støperigata 0250 Oslo, Norway
+                        </li>
+                    </ul>
                 </ul>
 
             </div>
