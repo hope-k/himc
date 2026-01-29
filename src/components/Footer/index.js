@@ -26,10 +26,14 @@ const Footer = () => {
 
             <div className='mt-[3rem] lg:mx-[2rem]'>
                 <h1 className='font-semibold text-lg mb-3'>Address</h1>
-                <ul className='text-[#6084a4] max-w-lg text-[14.5px]'>
+                <ul className='text-[#6084a4] max-w-lg text-[12px]'>
                     <ul>
                         <li><b>United Kingdom :</b>31 Hurst St, Birmingham B5 4BD, UK</li>
                         <li><b>Phone : </b> +44 74 76487323</li>
+                    </ul>
+                    <ul>
+                        <li><b>Poland :</b> ul. Prosta 18, 00-850 Warszawa</li>
+                        <li><b>Phone : </b> +48 22 829 00 00</li>
                     </ul>
                     <ul className='my-3'>
                         <li><b>New Zealand :</b> Victoria St West, Auckland CBD Auckland 1010, New Zealand</li>

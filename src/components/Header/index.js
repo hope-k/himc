@@ -179,7 +179,8 @@ const Header = () => {
                 </div>
                 <div>
                   <div className="text-slate-600 font-bold text-sm">
-                    +44 74 76487323{" "}
+                    {/* +44 74 76487323{" "} */}
+                    +48 22 829 00 00
                   </div>
                   <div className="text-slate-500 text-sm">support@himccapital.com</div>
                 </div>
@@ -190,11 +191,13 @@ const Header = () => {
                 </div>
                 <div>
                   <div className="text-slate-600 font-bold text-sm">
-                    31 Hurst St
+                    {/* 31 Hurst St */}
+                    ul. Prosta 18, 00-850 Warszawa
                   </div>
                   <div className="text-slate-500 text-sm">
                     {" "}
-                    31 Hurst St, Birmingham B5 4BD, UK
+                    {/* 31 Hurst St, Birmingham B5 4BD, UK */}
+                    Warszawa, Poland
                   </div>
                 </div>
               </div>
