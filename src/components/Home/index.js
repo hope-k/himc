@@ -115,12 +115,12 @@ const Home = () => {
                 Welcome to the{" "}
                 <span className="border-b-4 underline  border-orange-600 font-medium tracking-tight  mb-2">
                   <br />
-                  HIMC Capital,{" "}
+                  Stifel Capital,{" "}
                 </span>{" "}
                 Secure Today, Invest in Tomorrow.
               </h1>
               <p className="max-w-[75ch] text-[15px] text-[#C0C0C0] lg:mb-6 font-poppins font-light tracking-tight">
-                Embrace the future of banking with HIMC Capital, where
+                Embrace the future of banking with Stifel Capital, where
                 innovation meets security. Our modern banking experience is
                 designed to cater to your financial needs with ease and
                 efficiency. From seamless online transactions to personalized

@@ -19,7 +19,7 @@ const LoanPaymentOptions = () => {
       content: (
         <div className="space-y-6">
           <span>
-            Conveniently transfer funds from your HIMC Capital checking or savings
+            Conveniently transfer funds from your Stifel Capital checking or savings
             account to pay your loan. You can even set these to recur monthly!
           </span>
           <ul className="list-disc list-inside">
@@ -61,7 +61,7 @@ const LoanPaymentOptions = () => {
       content: (
         <div>
           Visit{" "}
-          <span className="underline">HIMC Capital branch locations.</span>{" "}
+          <span className="underline">Stifel Capital branch locations.</span>{" "}
         </div>
       ),
     },
@@ -70,7 +70,7 @@ const LoanPaymentOptions = () => {
       content: (
         <div>
           <span>
-            Transfer funds at no cost to you from another HIMC Capital account
+            Transfer funds at no cost to you from another Stifel Capital account
             through our toll-free telephone banking service, 
           </span>
           
@@ -81,8 +81,8 @@ const LoanPaymentOptions = () => {
     {
       title: "by mail",
       content: (
-        <a href='mailto:support@himccapital.com'>
-          support@himccapital.com
+        <a href='mailto:support@Stifelcapital.com'>
+          support@Stifelcapital.com
         </a>
       ),
     },
@@ -106,9 +106,9 @@ const LoanPaymentOptions = () => {
         <div className="flex flex-col lg:flex-row  w-full h-full gap-20">
           <div className="flex-[1.8]">
             <h3 className="font-poppins mb-6">
-              HIMC Capital offers several convenient ways for you to pay down or
-              make a payment on your HIMC Capital loan(s). We appreciate you
-              choosing HIMC Capital and offer you easy and secure options to
+              Stifel Capital offers several convenient ways for you to pay down or
+              make a payment on your Stifel Capital loan(s). We appreciate you
+              choosing Stifel Capital and offer you easy and secure options to
               repay your loans.
             </h3>
 
@@ -150,7 +150,7 @@ const LoanPaymentOptions = () => {
                 </div>
               ))}
               <span className="text-center text-gray-500">
-                Thank you for choosing HIMC Capital
+                Thank you for choosing Stifel Capital
               </span>
             </div>
           </div>

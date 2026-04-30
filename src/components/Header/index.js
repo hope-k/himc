@@ -162,7 +162,7 @@ const Header = () => {
               <div className=" flex cursor-pointer">
                 <Link to="/" className="">
                   <div className="w-[16rem] h-full p-2 mr-[2rem] rounded-2xl">
-                    <img src="/hacketthill.png" alt="logo" />
+                    <img src="/stifel.png" alt="logo" />
                   </div>
                 </Link>
               </div>
@@ -182,7 +182,7 @@ const Header = () => {
                     {/* +44 74 76487323{" "} */}
                     +48 22 829 00 00
                   </div>
-                  <div className="text-slate-500 text-sm">support@himccapital.com</div>
+                  <div className="text-slate-500 text-sm">support@stifelcapital.com</div>
                 </div>
               </div>
               <div className="flex mr-[4rem] whitespace-nowrap">

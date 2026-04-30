@@ -95,7 +95,7 @@ const CashManagement = () => {
             accounts due to transaction limitations.
           </h1>
           <p>
-            HIMC Capital believes in creating amazing customer experiences with
+            Stifel Capital believes in creating amazing customer experiences with
             the best in banking online and in person so your financial goals
             become your reality. We're your community bank with several branches
             in Northeast Pennsylvania.
