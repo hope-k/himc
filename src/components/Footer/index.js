@@ -32,6 +32,10 @@ const Footer = () => {
                         <li><b>Phone : </b> +44 74 76487323</li>
                     </ul>
                     <ul>
+                        <li><b>Australia :</b> 34 Colin Street, West Perth, WA 6005</li>
+                        <li><b>Phone : </b> 00 61 3 9854 4666</li>
+                    </ul>
+                    <ul>
                         <li><b>Poland :</b> ul. Prosta 18, 00-850 Warszawa</li>
                         <li><b>Phone : </b> +48 22 829 00 00</li>
                     </ul>

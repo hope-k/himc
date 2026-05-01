@@ -192,12 +192,11 @@ const Header = () => {
                 <div>
                   <div className="text-slate-600 font-bold text-sm">
                     {/* 31 Hurst St */}
-                    ul. Prosta 18, 00-850 Warszawa
+                    34 Colin Street,
                   </div>
                   <div className="text-slate-500 text-sm">
                     {" "}
-                    {/* 31 Hurst St, Birmingham B5 4BD, UK */}
-                    Warszawa, Poland
+                    West Perth, WA 6005
                   </div>
                 </div>
               </div>
@@ -356,9 +355,8 @@ const Header = () => {
                   <div className="duration-200 p-4 hover:text-white text-sm font-semibold hover:bg-[#102c52] flex items-center font-montserrat">
                     {menu.title}
                     <ChevronDownIcon
-                      className={`ml-2 h-5 w-5 transform ${
-                        openMenu === index ? "rotate-180" : ""
-                      } transition-transform duration-200`}
+                      className={`ml-2 h-5 w-5 transform ${openMenu === index ? "rotate-180" : ""
+                        } transition-transform duration-200`}
                     />
                   </div>
                   {openMenu === index && (
