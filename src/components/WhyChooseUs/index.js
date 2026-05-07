@@ -16,7 +16,7 @@ function WhyChooseUs() {
           className="w-it h-it mb-2"
         />
       ),
-      title: "No fees",
+      title: "No fee",
       description:
         "We are trusted by millions of customers worldwide for our secure and reliable banking services.",
     },
