@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='flex bg-[#fff] shadow-lg lg:px-[6rem] px-[2rem] lg:h-[50vh] flex-wrap w-full'>
             <div className='mt-[3rem] flex flex-col'>
                 <div className='w-[300px] h-[300px] absolute'>
-                    <img src='/hacketthill.png' alt='logo' />
+                    <img src='/hill.png' alt='logo' />
                 </div>
                 <p className='font-light relative top-[6.5rem] max-w-lg text-[15px] text-[#6084a4]'>
                     We’re a leading international banking group committed to building a sustainable business over the long-term. We operate in some of the world's most dynamic markets and have been for over 15 years.

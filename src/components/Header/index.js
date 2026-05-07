@@ -162,7 +162,7 @@ const Header = () => {
               <div className=" flex cursor-pointer">
                 <Link to="/" className="">
                   <div className="w-[16rem] h-full p-2 mr-[2rem] rounded-2xl">
-                    <img src="/hacketthill.png" alt="logo" />
+                    <img src="/hill.png" alt="logo" />
                   </div>
                 </Link>
               </div>

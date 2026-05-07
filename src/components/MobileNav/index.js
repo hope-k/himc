@@ -190,7 +190,7 @@ const MobileNav = ({ open, toggleOpen }) => {
           <div className=" cursor-pointer">
             <Link to="/" className=" z-[-1] relative top-[2.3rem]">
               <div className="">
-                <img className="" src="/hacketthill.png" alt="logo" />
+                <img className="" src="/hill.png" alt="logo" />
               </div>
             </Link>
           </div>
