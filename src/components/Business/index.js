@@ -73,7 +73,7 @@ const Business = () => {
 
         <div className="max-w-[60vw] mx-auto text-center font-montserrat my-16 ">
           <h1>
-          Stifel Capital has customized solutions to help your business grow. We provide flexible financing options for a variety of business needs. Our expert lending team will partner with you to understand your business and create a solution to take your business to the next level. 
+          Simmons & Hill Capital has customized solutions to help your business grow. We provide flexible financing options for a variety of business needs. Our expert lending team will partner with you to understand your business and create a solution to take your business to the next level. 
           </h1>
         </div>
 
@@ -103,7 +103,7 @@ const Business = () => {
         <div className="lg:max-w-[60vw] max-w-[80vw] space-y-6 mx-auto text-center font-poppins my-10 ">
         
           <p>
-            Stifel Capital believes in creating amazing customer experiences with
+            Simmons & Hill Capital believes in creating amazing customer experiences with
             the best in banking online and in person so your financial goals
             become your reality. We're your community bank with several branches
             in Northeast Pennsylvania.
@@ -116,7 +116,7 @@ const Business = () => {
             <div className="space-y-3 flex-1">
                 <h1 className="text-xs font-semibold font-poppins uppercase tracking-wide">news</h1>
                 <h2 className="font-montserrat text-xl text-[#142b54] uppercase">keep up to date with us</h2>
-                <p className="font-montserrat">Learn about all of the exciting things going on at Stifel Capital on our News page.</p>
+                <p className="font-montserrat">Learn about all of the exciting things going on at Simmons & Hill Capital on our News page.</p>
                 <button className="mt-10 underline font-semibold">Find out what's new</button>
 
             </div>
